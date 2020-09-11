@@ -2,13 +2,13 @@ const MoveBackground = (entities, { input }) => {
     const { payload } = input.find(x => x.name === "onKeyDown") || {};
 
     if (payload) {
-        const { background } = entities;
+        const { sprite, background } = entities;
         const { key } = payload;
         console.log(key)
         if (key === "a") {
-            background.scrollPos += 1;
+            background.scrollPos += 2;
         } else if (key === "d") {
-            background.scrollPos -= 1;
+            background.scrollPos -= 2;
         }
     }
 
