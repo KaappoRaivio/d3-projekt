@@ -4,6 +4,7 @@ import './App.css';
 import { GameEngine } from "react-game-engine";
 import {MoveBackground} from "./systems";
 import Background from "./components/Background";
+import Sprite from "./components/Sprite";
 
 class Box extends PureComponent {
     render() {
@@ -19,7 +20,7 @@ const App = () => (
     <GameEngine style={{ width: "100%", height: "1000px", overflowX: "hidden" }}
         systems={[MoveBackground]}
         entities={{
-            background: {scrollPos: 0, renderer: <Background />}
+            background: {scrollPos: 0, renderer: <Background />},
             sprite: {x: 0, y: 0, renderer: <Sprite />}
         }}>
     </GameEngine>
